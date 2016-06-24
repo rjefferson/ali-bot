@@ -6,7 +6,7 @@ def testAlienvOnArch(architecture) {
     set -e
     set -o pipefail
     mkdir -p /cvmfs/.modulerc || true
-    [[ "$PARROT_ENABLED" != TRUE ]] && { parrot_run --mount=/cvmfs/alice.cern.ch/xbin/alienv=$PWD/ali-bot/cvmfs/alienv "$0" "$@"; exit $?; }
+    [[ "$PARROT_ENABLED" != TRUE ]] && { parrot_run --mount=/cvmfs/alice.cern.ch/bin/alienv=$PWD/ali-bot/cvmfs/alienv "$0" "$@"; exit $?; }
     OLD_VER="AliPhysics/vAN-20150131"
     NEW_VER="AliPhysics/vAN-20160622-1"
     case $ARCHITECTURE in
