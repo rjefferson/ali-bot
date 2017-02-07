@@ -44,7 +44,7 @@ fi
 CMD="$CMD"
 DEST=ali-bot
 DRYRUN=${DRYRUN:-}
-[[ ! -e $DEST/.git ]] && git clone https://github.com/alisw/ali-bot $DEST
+[[ ! -e $DEST/.git ]] && git clone https://github.com/rjefferson/ali-bot $DEST
 mkdir -p log
 find log/ -type f -mtime +3 -delete || true
 LOG="log/log-$(date -u +%Y%m%d-%H%M%S%z)"
